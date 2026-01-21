@@ -14,7 +14,13 @@ int main(int argc,char *argv[]){
         printf("Error opening files.");
         return 1;
     }
-    xorcrypt(inputfile,outputfile,argv[3],strlen(argv[3]));
+    
+    int flag = 1; int choice = 0;
+    while(flag){
+        printf("Choose Encryption/Decryption Algorithm \n 1- XOR Crypt \n 2- xxx");
+        scanf("%d",&choice);
+        if(choice == 1) xorcrypt(inputfile,outputfile,argv[3],strlen(argv[3]));
+    }
     printf("encryption succesful!");
     return 0;
 }
